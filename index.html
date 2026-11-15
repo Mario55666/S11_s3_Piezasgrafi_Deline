@@ -334,6 +334,7 @@ footer{background:#555553;color:#fff;text-align:center;padding:18px 16px;font-si
       <div><label for="dq1">1. En estos planos, la l&#237;nea discontinua representa&#8230;</label><select id="dq1"><option value="">Elige&#8230;</option><option value="a">El corte: por ah&#237; se separa la pieza</option><option value="b">El doblez: ah&#237; se marca el cart&#243;n para que pliegue</option><option value="c">El sangrado: hasta ah&#237; llega el fondo impreso</option></select></div>
       <div><label for="dq2">2. &#191;Cu&#225;ntas bandas tiene la columna central en los tres planos?</label><input id="dq2" type="text" inputmode="numeric"></div>
     </div>
+    <details class="help"><summary>&#128161; Ayuda para las dos preguntas</summary><ol><li><b>C&#243;mo empezar:</b> pulsa &#171;Resaltar hendidos&#187; y mira cu&#225;les l&#237;neas se colorean: son las discontinuas. Luego pulsa &#171;Resaltar cortes&#187; para ver las continuas.</li><li><b>Qu&#233; mirar:</b> para la pregunta 2, ubica la columna del centro y cuenta los rect&#225;ngulos que quedan entre l&#237;neas de doblez de arriba hacia abajo; no cuentes las solapas ni las leng&#252;etas de los extremos.</li><li><b>Ejemplo de otra situaci&#243;n:</b> en una hoja de cuaderno, la l&#237;nea de puntos para arrancar es el corte y la que dobla la tapa sin romperla es el hendido.</li></ol></details>
     <div class="row" style="margin-top:10px"><button class="btn" id="dlGo" type="button">Comprobar</button></div>
     <div id="fbDl"></div>
   </div>
@@ -364,6 +365,7 @@ footer{background:#555553;color:#fff;text-align:center;padding:18px 16px;font-si
       <p style="font-size:.85rem;color:var(--g1);margin:.5em 0 0">Si el video no carga dentro de la página, usa «Abrir en YouTube»: https://www.youtube.com/watch?v=Lax3QODXpY8. Puedes activar subtítulos en español desde el reproductor.</p>
       <div id="vidFrame"></div>
     </div>
+    <details class="help"><summary>💡 Ayuda para los casos</summary><ol><li><b>Cómo empezar:</b> antes de leer las frases, pregúntate qué se ve mal en el caso: ¿falta color de fondo?, ¿un texto está mal ubicado?, ¿una medida es incorrecta?</li><li><b>Qué mirar:</b> descarta primero la frase que habla de otra cosa (texto en un caso de fondo, grosor en un caso de colocación). Entre las dos que quedan, elige la que explica el defecto completo.</li><li><b>Ejemplo de otra situación:</b> si una camiseta estampada deja un borde sin color tras cortarla, el problema es que la estampa no llegaba hasta el borde de la tela, no el grosor del hilo.</li></ol></details>
     <div class="row"><span class="dots" id="defDots"></span><span id="defN" class="mono"></span></div>
     <div id="defBox"></div>
   </div>
@@ -495,6 +497,7 @@ footer{background:#555553;color:#fff;text-align:center;padding:18px 16px;font-si
     <div class="slots" id="anaSlots" aria-label="Tu palabra"></div>
     <div class="tiles" id="anaTiles" aria-label="Letras disponibles"></div>
     <div class="row"><button class="btn sm alt" id="anaMix" type="button">↻ Mezclar</button><button class="btn sm alt" id="anaGive" type="button">Dame una letra</button></div>
+    <details class="help"><summary>💡 Ayuda para el anagrama</summary><ol><li><b>Cómo empezar:</b> lee la pista y cuenta las casillas vacías: ese es el número de letras de la palabra (también aparece junto a la pista).</li><li><b>Qué mirar:</b> algunas palabras repiten letras (por ejemplo, SANGRADO lleva dos A). Si te equivocas, el aviso te da la primera letra y, al segundo error, también la última. «Dame una letra» pone la siguiente letra correcta; puedes usarlo cuantas veces quieras.</li><li><b>Si te atascas:</b> toca una letra de las casillas de arriba para devolverla, o usa «Mezclar» para ver las letras de abajo en otro orden. Todos los términos están en el 📖 Glosario.</li><li><b>Ejemplo de otra situación:</b> para ordenar «PLAEP» con la pista «Soporte donde se imprime», pregúntate con qué letra empezaría y ve probando.</li></ol></details>
     <div id="fb5"></div>
     <div class="next"><button class="btn am" id="go5" type="button">Seguir →</button></div>
   </div>
@@ -562,6 +565,7 @@ footer{background:#555553;color:#fff;text-align:center;padding:18px 16px;font-si
       <h3>Hipótesis B · Control de calidad</h3>
       <p>Si el reporte de control verifica que el descalce entre arte y troquel no supere ± <select id="hB1" style="width:auto"></select> mm en un empaque <select id="hB2" style="width:auto"><option value="">elige…</option><option value="f">farmacéutico</option><option value="a">de alimentos</option></select>, no se liberarán lotes con información obligatoria cortada u oculta.</p>
     </div>
+    <details class="help"><summary>💡 Ayuda para las hipótesis</summary><ol><li><b>Cómo empezar:</b> en la hipótesis A, el descalce que prometes resistir no puede ser mayor que tu zona de seguridad ni que tu sangrado.</li><li><b>Qué mirar:</b> en esta sesión, zona de seguridad y sangrado parten de 3 mm. En la B, la tolerancia depende del sector: ±0,5 mm en farmacéutico y ±1,0 mm en alimentos.</li><li><b>Ejemplo de otra situación:</b> si cuelgas un cuadro con un marco de 3 cm, prometer que aguanta un error de 2 cm es coherente; prometer 4 cm, no.</li></ol></details>
     <div class="row"><button class="btn" id="hGo" type="button">Validar hipótesis</button></div>
     <div id="fb7h"></div>
   </div>
@@ -1079,8 +1083,9 @@ var ANA = [
   ["CALIBRE", "Grosor del cartón; se suma dos veces a cada cota interna.", "Ejemplo: cartón de 0,4 mm añade 0,8 mm a cada medida."],
   ["TOLERANCIA", "Descalce máximo que se acepta para liberar un lote.", "Ejemplo: ±0,5 mm en una caja de medicamento, según el parámetro de la sesión."]
 ];
-var anaI = 0, anaPick = [], anaLetters = [], anaTries = 0;
+var anaI = 0, anaPick = [], anaLetters = [], anaTries = 0, anaLock = false;
 function anaStart() {
+  anaLock = false;
   if (anaI >= ANA.length) { $("#anaHint").textContent = ""; $("#anaSlots").innerHTML = ""; $("#anaTiles").innerHTML = ""; $("#anaDots").innerHTML = ANA.map(function () { return "<i class='ok'></i>"; }).join(""); acierto($("#fb5"), "Formaste los cinco términos. Todos están en el glosario."); return; }
   var w = ANA[anaI][0], l; do { l = shuffle(w.split("")); } while (l.join("") === w);
   anaLetters = l.map(function (ch, i) { return { ch: ch, id: i, used: false }; }); anaPick = []; anaRender();
@@ -1088,7 +1093,7 @@ function anaStart() {
 function anaRender() {
   var w = ANA[anaI][0];
   $("#anaDots").innerHTML = ANA.map(function (a, i) { return "<i class='" + (i < anaI ? "ok" : (i === anaI ? "cur" : "")) + "'></i>"; }).join("");
-  $("#anaHint").textContent = "Pista " + (anaI + 1) + " de 5: " + ANA[anaI][1];
+  $("#anaHint").textContent = "Pista " + (anaI + 1) + " de 5 (" + w.length + " letras): " + ANA[anaI][1];
   var s = ""; for (var i = 0; i < w.length; i++) s += anaPick[i] !== undefined ? "<button type='button' class='tile' data-back='" + i + "' aria-label='Devolver letra " + anaLetters[anaPick[i]].ch + "'>" + anaLetters[anaPick[i]].ch + "</button>" : "<span class='slot'></span>";
   $("#anaSlots").innerHTML = s;
   $("#anaTiles").innerHTML = anaLetters.map(function (t, i) { return t.used ? "" : "<button type='button' class='tile' style='--i:" + i + "' data-t='" + i + "'>" + t.ch + "</button>"; }).join("");
@@ -1096,19 +1101,19 @@ function anaRender() {
 function anaCheck() {
   var w = ANA[anaI][0]; if (anaPick.length < w.length) return;
   var g = anaPick.map(function (i) { return anaLetters[i].ch; }).join("");
-  if (g === w) { var a = ANA[anaI]; anaI++; anaTries = 0; acierto($("#fb5"), "<b>" + a[0] + "</b>: " + a[1] + " " + a[2] + (anaI < ANA.length ? " <button type='button' class='btn sm' id='anaNext'>Siguiente palabra</button>" : "")); if (anaI >= ANA.length) anaStart(); else { $("#anaTiles").innerHTML = ""; } }
+  if (g === w) { var a = ANA[anaI]; anaI++; anaTries = 0; anaLock = true; acierto($("#fb5"), "<b>" + a[0] + "</b>: " + a[1] + " " + a[2] + (anaI < ANA.length ? " <button type='button' class='btn sm' id='anaNext'>Siguiente palabra</button>" : "")); if (anaI >= ANA.length) anaStart(); else { $("#anaTiles").innerHTML = ""; } }
   else { anaTries++; refuerzo($("#fb5"), { pista: "La palabra empieza por «" + w.charAt(0) + "»" + (anaTries > 1 ? " y termina en «" + w.charAt(w.length - 1) + "»" : "") + ".", dato: ANA[anaI][1], contexto: "Es uno de los términos que usaste en los simuladores de la estación 4.", re: "Toca las letras de arriba para devolverlas y prueba otro orden." }); }
 }
 $("#s5").addEventListener("click", function (e) {
   if (e.target.id === "anaNext") { $("#fb5").innerHTML = ""; anaStart(); return; }
-  if (anaI >= ANA.length) return;
+  if (anaI >= ANA.length || anaLock) return;
   var t = e.target.closest("[data-t]"), b = e.target.closest("[data-back]");
   if (t) { var i = +t.getAttribute("data-t"); anaLetters[i].used = true; anaPick.push(i); anaRender(); anaCheck(); }
   else if (b) { var k = +b.getAttribute("data-back"); anaLetters[anaPick[k]].used = false; anaPick.splice(k, 1); anaRender(); }
 });
-$("#anaMix").addEventListener("click", function () { if (anaI >= ANA.length) return; var free = anaLetters.filter(function (t) { return !t.used; }), sh = shuffle(free.map(function (t) { return t.ch; })); free.forEach(function (t, i) { t.ch = sh[i]; }); anaRender(); });
+$("#anaMix").addEventListener("click", function () { if (anaI >= ANA.length || anaLock) return; var free = anaLetters.filter(function (t) { return !t.used; }), sh = shuffle(free.map(function (t) { return t.ch; })); free.forEach(function (t, i) { t.ch = sh[i]; }); anaRender(); });
 $("#anaGive").addEventListener("click", function () {
-  if (anaI >= ANA.length) return; var w = ANA[anaI][0];
+  if (anaI >= ANA.length || anaLock) return; var w = ANA[anaI][0];
   anaLetters.forEach(function (t) { t.used = false; }); var keep = 0;
   var cur = anaPick.map(function (i) { return anaLetters[i].ch; }); while (keep < cur.length && cur[keep] === w.charAt(keep)) keep++;
   anaPick = []; for (var p = 0; p <= keep && p < w.length; p++) { for (var j = 0; j < anaLetters.length; j++) { if (!anaLetters[j].used && anaLetters[j].ch === w.charAt(p)) { anaLetters[j].used = true; anaPick.push(j); break; } } }
